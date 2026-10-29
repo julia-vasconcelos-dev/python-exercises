@@ -1,5 +1,7 @@
-senha=int(input("digite sua senha:"))
-while senha!= 1234:
-     print("senha incorreta!")
-     senha=int(input("digite sua senha:"))
-     print("acesso autorizado!")
+senha = int(input("Digite sua senha: "))
+
+while senha != 1234:
+     print("Senha incorreta!")
+     senha = int(input("Digite sua senha:" ))
+     
+print("Acesso autorizado!")
