@@ -1,3 +1,5 @@
+quantidade = int(input("Digite a quantidade de números: "))
+
 while quantidade <= 0:
     print("Digite uma quantidade maior que zero.")
     quantidade = int(input("Digite a quantidade de números: "))
@@ -16,3 +18,10 @@ for i in range(quantidade):
             maior = numero
         if numero < menor:
             menor = numero
+
+media = soma / quantidade
+
+print("Soma:", soma)
+print("Média:", media)
+print("Maior valor:", maior)
+print("Menor valor:", menor)
