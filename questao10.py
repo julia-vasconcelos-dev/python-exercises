@@ -1,34 +1,42 @@
-saldo=1000
-opcao=0
-while opcao !=4:
-    print("\n=====caixa eletrônico=====")
-    print("1- Consultar saldo")
-    print("2- Despositar")
-    print("3- Sacar")
-    print("4- Sair")
+saldo = 1000
+opcao = 0
 
-    opcao= int(input("Digite uma opção:"))
+while opcao != 4:
+    print("\n===== CAIXA ELETRÔNICO =====")
+    print("1 - Consultar saldo")
+    print("2 - Depositar")
+    print("3 - Sacar")
+    print("4 - Sair")
 
-    if opcao== 1:
-       print("Saldo atual:R$", saldo) 
+    opcao = int(input("Digite uma opção: "))
 
-    elif opcao== 2:
-       valor= float(input("Digite o valor do deposito:R$ "))
-       saldo=saldo+ valor
-       print("Depósito realizado com sucesso")
-       print("Saldo atual: R$", saldo)
-    elif opcao== 3:
-       valor = float(input("Digite o valor do saque:R$ "))   
-    
-       if valor <= saldo:
-        saldo =saldo-valor
-        print("Saque realizado com sucesso!")
-        print("Saldo atual: R$ ", saldo)
-       else:
-        print("saldo insuficiente!")
+    if opcao == 1:
+        print("Saldo atual: R$", saldo)
 
-    elif opcao== 4:
+    elif opcao == 2:
+        valor = float(input("Digite o valor do depósito: R$ "))
+
+        if valor > 0:
+            saldo = saldo + valor
+            print("Depósito realizado com sucesso!")
+            print("Saldo atual: R$", saldo)
+        else:
+            print("O valor do depósito deve ser maior que zero.")
+
+    elif opcao == 3:
+        valor = float(input("Digite o valor do saque: R$ "))
+
+        if valor <= 0:
+            print("O valor do saque deve ser maior que zero.")
+        elif valor <= saldo:
+            saldo = saldo - valor
+            print("Saque realizado com sucesso!")
+            print("Saldo atual: R$", saldo)
+        else:
+            print("Saldo insuficiente!")
+
+    elif opcao == 4:
         print("Programa encerrado!")
-    
+
     else:
         print("Opção inválida!")
